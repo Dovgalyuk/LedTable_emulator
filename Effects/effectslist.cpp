@@ -14,6 +14,7 @@
 #include "11_dynamic_square.h"
 #include "12_mouse.h"
 #include "13_pacman.h"
+#include "14_ny2020.h"
 
 //#include "testmode.h"
 
@@ -72,6 +73,8 @@ Effect *EffectsList::getNewEffectInstance(int num) {
         return new Mouse();
     case 13:
         return new Pacman();
+    case 14:
+        return new NY2020();
         /*case 13:
         return new Rain();
     case 14:

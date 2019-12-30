@@ -3,7 +3,7 @@
 
 #include "timer.h"
 
-#define DEF_TIME_VAL 60
+#define DEF_TIME_VAL 10
 
 MainWindow::MainWindow(QWidget *parent) : QWidget(parent)
 {

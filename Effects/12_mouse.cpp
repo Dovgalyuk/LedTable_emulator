@@ -38,7 +38,7 @@ static const uint32_t mouse2[W*H] PROGMEM = {
     0x000000, 0x000000, 0x000000, 0x000000, 0x000000, 0xffffff, 0x000000, 0x000000, 0xffffff, 0x000000, 0x000000, 0x000000,
 };
 
-static void drawSprite(int x, int y, uint32_t *spr)
+static void drawSprite(int x, int y, const uint32_t *spr)
 {
     for (int i = 0 ; i < W ; ++i)
     {
