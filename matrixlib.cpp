@@ -12,15 +12,15 @@ void initMatrix() {
 }
 
 int getPixNum(const uint8_t x, const uint8_t y) {
-    if (x < 0 || x >= HEIGHT || y < 0 || y >= WIDTH) {
+    if (x < 0 || x >= WIDTH || y < 0 || y >= HEIGHT) {
         qDebug() <<"Value out of range in function getPixNum" << x << y;
     }
 
-    return (x * WIDTH + y);
+    return (y * WIDTH + x);
 }
 
 CRGB &getPix(const uint8_t x, const uint8_t y) {
-    if (x < 0 || x >= HEIGHT || y < 0 || y >= WIDTH) {
+    if (x < 0 || x >= WIDTH || y < 0 || y >= HEIGHT) {
         qDebug() << "Value out of range in function getPix" << x << y;
         return leds[0];
     }
@@ -33,7 +33,7 @@ uint32_t getPixColor(CRGB val) {
 }
 
 uint32_t getPixColor(const uint8_t x, const uint8_t y) {
-    if (x < 0 || x >= HEIGHT || y < 0 || y >= WIDTH) {
+    if (x < 0 || x >= WIDTH || y < 0 || y >= HEIGHT) {
         qDebug() << "Value out of range in function getPixColor" << x << y;
         return 0;
     }
@@ -42,7 +42,7 @@ uint32_t getPixColor(const uint8_t x, const uint8_t y) {
 }
 
 void setPixColor(const uint8_t x, const uint8_t y, CRGB color) {
-    if (x < 0 || x >= HEIGHT || y < 0 || y >= WIDTH) {
+    if (x < 0 || x >= WIDTH || y < 0 || y >= HEIGHT) {
         qDebug() << "Value out of range in function setPixColor" << x << y;
         return;
     }
@@ -79,8 +79,8 @@ void randomInit() {
 // }
 
 void fader(uint8_t step) {
-  for (uint8_t i = 0; i < HEIGHT; i++) {
-    for (uint8_t j = 0; j < WIDTH; j++) {
+  for (uint8_t i = 0; i < WIDTH; i++) {
+    for (uint8_t j = 0; j < HEIGHT; j++) {
       fadePix(i, j, step);
     }
   }

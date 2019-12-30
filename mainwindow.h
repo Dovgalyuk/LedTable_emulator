@@ -19,7 +19,6 @@ class MainWindow : public QWidget
     Q_OBJECT
     QList<QPushButton*> buttons;
     QTimer *tmr;
-    const int size = 10;
     //TableModes *modes;
     EffectsList *effects;
 public:

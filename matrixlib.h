@@ -3,8 +3,8 @@
 
 #include "FastLED/FastLED.h"
 
-#define WIDTH 16
-#define HEIGHT 16
+#define WIDTH 24
+#define HEIGHT 10
 #define LEDS_CNT WIDTH * HEIGHT
 #define MAX_BRIGHTNESS 255
 #define MAX_HSV 255

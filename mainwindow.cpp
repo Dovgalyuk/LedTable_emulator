@@ -51,12 +51,12 @@ QLayout *MainWindow::initButtonMassive()
     buttons.reserve(WIDTH * HEIGHT);
     for (int i = 0; i < WIDTH; ++i) {
         for (int j = 0; j < HEIGHT; ++j) {
-            QPushButton *button = new QPushButton(QString("%1").arg(i * size + j));
+            QPushButton *button = new QPushButton();
             button->setFixedSize(btnSize);
             button->setStyleSheet(QString("background-color: %1").arg(bgColor->name()));
 
             buttons << button;
-            layout->addWidget(button, i, j);
+            layout->addWidget(button, j, i);
         }
     }
 
