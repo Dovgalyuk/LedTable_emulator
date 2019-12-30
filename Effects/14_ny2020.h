@@ -307,8 +307,8 @@ public:
     {
         fader(255);
         for (int i = 0 ; i < NY_COUNT ; ++i)
-            drawSprite(i * NY_SPRITE_W - phase, 0, sprites[items[i]]);
-        phase = (phase + 1) % NY_SPRITE_W;
+            drawSprite(i * (NY_SPRITE_W + 1) - phase, 0, sprites[items[i]]);
+        phase = (phase + 1) % (NY_SPRITE_W + 1);
         if (phase == 0)
         {
             for (int i = 1 ; i < NY_COUNT ; ++i)
