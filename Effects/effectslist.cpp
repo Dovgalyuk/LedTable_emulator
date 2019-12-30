@@ -13,6 +13,7 @@
 #include "10_starfall.h"
 #include "11_dynamic_square.h"
 #include "12_mouse.h"
+#include "13_pacman.h"
 
 //#include "testmode.h"
 
@@ -69,6 +70,8 @@ Effect *EffectsList::getNewEffectInstance(int num) {
         return new Starfall();
     case 12:
         return new Mouse();
+    case 13:
+        return new Pacman();
         /*case 13:
         return new Rain();
     case 14:
