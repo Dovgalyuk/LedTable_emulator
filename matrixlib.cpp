@@ -58,6 +58,10 @@ uint8_t pgm_read_byte(const uint8_t *val) {
     return *val;
 }
 
+uint32_t pgm_read_dword(const uint32_t *val) {
+    return *val;
+}
+
 void randomInit() {
     qsrand(QTime(0,0,0).secsTo(QTime::currentTime()));
 }

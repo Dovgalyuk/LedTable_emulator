@@ -23,6 +23,7 @@ uint32_t getPixColor(const uint8_t x, const uint8_t y);
 void setPixColor(const uint8_t x, const uint8_t y, CRGB color);
 CRGB* getLeds(void);
 uint8_t pgm_read_byte(const uint8_t *val);
+uint32_t pgm_read_dword(const uint32_t *val);
 
 void randomInit(void);
 // uint8_t random(void);

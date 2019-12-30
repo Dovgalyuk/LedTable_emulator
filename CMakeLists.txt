@@ -24,7 +24,8 @@ add_executable(LEDTableEmulator
     matrixlib.cpp
     Effects/effectslist.cpp
     showmatrix.cpp
-    FastLED/noise.cpp)
+    FastLED/noise.cpp
+    Effects/12_mouse.cpp)
 
 target_include_directories(LEDTableEmulator PRIVATE FastLED)
 target_link_libraries(LEDTableEmulator Qt5::Widgets)
